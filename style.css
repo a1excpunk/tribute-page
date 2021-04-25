@@ -1,153 +1,119 @@
-body{
-    font-family: 'Oswald', sans-serif;
-    background-color: #dcdcdc;
+:root{
+    --dark:#1d1d1d;
+    --light:#e4e4e4;
 }
 
-/* header */
-h1{
-    text-align: center;
-    font-family: 'Lobster', sans-serif;
-    font-weight: 300;
-    font-size: 40px;
-    cursor: pointer;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h2{
-    text-align: center;
-    margin: 20px;
+body {
+    font-family: "Lato", sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
 }
 
-/* occupation */
-
-ul{
-    list-style-type: none;
-    text-align: center;
-}
-
-.occupation_ul{
-    display: none;
-}
-
-#UL li {
-    margin: 15px;
-}
-
-#UL li p {
-    display: inline;
-    background-color: rgb(27, 27, 27);
-    color: white;
-    padding: 5px 8px;
-    border-radius: 6px;
-}
-
-#UL p:hover{
-    filter: invert(180);
-    cursor: context-menu;
-}
-
-/* img */
-
-#img{
-    text-align: center;
-    margin: 30px 18px 0 18px;
-    background-color: #ffffff;
-    padding: 10px 0;
-    border-radius: 5px;
-}
-
-
-/* responsiveness */
-img{
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* buttons*/
-
-.qoute_container,.bio,a{
+a {
     display: inline-block;
-    background-color: rgb(27, 27, 27);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    margin: 20px 0 0 10px;
-}
-
-.qoute_container:hover{
-    filter: invert(180);
-    cursor: pointer;
-}
-
-.bio:hover{
-    filter: invert(180);
-    cursor: pointer;
-}
-
-a{
     text-decoration: none;
+    color: var(--light);
 }
 
-a:hover{
-    filter: invert(180);
+li{
+    list-style-type: none;
 }
 
-#movies {
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+    position: relative;
+    overflow: visible;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-headings{
+    font-size: 30px;
+    padding: 20px 0;
+    margin: 20px 0;
+    border-bottom: 2px solid #3b3b3b;
+}
+
+/* hero image */
+.hero-image-container{
+    min-width: 100%;
+}
+
+.hero-img{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/Quentin-Tarantino.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+
+h1 {
+    display: inline-block;
+    letter-spacing: 8px;
     text-align: center;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    background-color: #1d1d1d73;
+    padding: 5px 40px;
 }
 
-/* bio */
-
-blockquote{
-    width: 900px;
-    margin-left: 20%;
+h1:hover{
+    transition: all 200ms ease-in-out;
+    background-color: #c4000028;
 }
 
-#birth{
-    text-align: center;
+
+/* about */
+.occupation{
+    width: 20%;
+    position: absolute;
+    right: 0;
 }
-#birth p{
-    margin-top: 30px;
-    font-size: 13px;
+
+.bio{
+    width: 70%;
 }
+
 
 /* quotes */
 
-#quotes_ul li{
-    margin: 15px;
+
+/* movies */
+
+img{
+    filter: grayscale(1);
+    position: relative;
 }
 
-span{
-    background-color: rgb(27, 27, 27);
-    color: white;
-    padding: 5px 8px;
-    border-radius: 6px;
+img:hover{
+    filter: grayscale(0);
+    transition: all 300ms ease;
 }
-
-#quotes_ul li:hover{
-    cursor: context-menu;
-}
-
-
-.QUOTES, .t_bio{
-    display: none; 
-}
-
-#quotes{
-    text-align: center;
-}
-
 
 /* footer */
-
-footer{
+footer.container{
     text-align: center;
     font-size: 12px;
-}
-
-
-
-
-.hidden{
-    display:none;
+    margin: 40px 0;
 }
