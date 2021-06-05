@@ -11,6 +11,13 @@
 </head>
 
 <body>
+    <audio class="gun" src="./assets/audio/shotgun.mp3"></audio>
+    <div class="audio">
+        <audio class="music" autoplay controls loop preload="auto"
+            src="./assets/audio/George Baker- Little Green Bag.mp3" type="audio/mpeg">
+        </audio>
+        <div class="play pause">Play</div>
+    </div>
     <section class="hero-image-container" id="top">
         <div class="hero-img">
             <a class="tarantino" href="#about">
@@ -20,7 +27,7 @@
         </div>
     </section>
 
-    <a href="#top"><button class="btn"></button></a>
+    <a href="#top"><button class="btn" id="topBtn"></button></a>
 
     <section class="container" id="about">
         <div class="section-headings">
@@ -199,9 +206,23 @@
     </section>
 
     <footer class="container">
-        <p id="copyRight">Copyright &copy; Alex  2021</p>
+        <p id="copyRight">Copyright &copy; Alex 2021</p>
     </footer>
+    <script>
 
+        document.querySelector(".play").addEventListener('click', () => {
+            document.querySelector(".music").play();
+            document.querySelector(".music").currentTime = 0;
+
+        })
+
+        console.log(document.querySelector('.play'));
+        document.getElementById('topBtn').addEventListener('click', () => {
+            document.querySelector('.gun').play();
+            document.querySelector(".gun").currentTime = 0;
+        })
+
+    </script>
 </body>
 
 </html>
