@@ -189,12 +189,21 @@ h1:hover {
 }
 
 /* movies */
+.movies.container{
+  background-image: url("../images/splash3.png");
+  background-repeat: repeat;
+  padding-bottom: 50px;
+  max-width: 100%;
+}
+
 #movies {
   margin-top: 40px;
+  margin: auto;
 }
 
 .images.flex {
-  row-gap: 20px;
+  row-gap: 50px;
+  column-gap: 50px;
 }
 
 .images a {
