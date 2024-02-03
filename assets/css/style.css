@@ -73,11 +73,11 @@ audio {
   display: none;
 }
 
-.play:active {
+.playBtn:active {
   transform: scale(0.95);
 }
 
-.play {
+.playBtn {
   position: absolute;
   top: 10px;
   right: 10px;
