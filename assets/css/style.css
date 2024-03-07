@@ -21,9 +21,10 @@ body {
   cursor: url("../images/knife.png") 5 15, auto;
 }
 
-::selection{
+::selection {
   background-color: #7e0000;
 }
+
 /* utils */
 a {
   text-decoration: none;
@@ -78,16 +79,22 @@ audio {
 }
 
 .playBtn {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 10px;
   z-index: 3;
   cursor: pointer;
   font-size: 1.5em;
-  color: #131313;
+  color: #000;
   font-weight: 900;
   padding: 10px;
-  background-color: #cacaca69;
+  transition: background-color 500ms ease;
+  background-color: rgba(206, 206, 204, 0.3);
+  border-left: 2px solid #cecece;
+}
+
+.playBtn:hover {
+  background-color: #cececc;
 }
 
 
@@ -118,7 +125,7 @@ audio {
   z-index: 2;
 }
 
-.tarantino:hover + .blood-splash {
+.tarantino:hover+.blood-splash {
   display: block;
 }
 
@@ -189,7 +196,7 @@ h1:hover {
 }
 
 /* movies */
-.movies.container{
+.movies.container {
   background-image: url("../images/splash3.png");
   background-repeat: repeat;
   padding-bottom: 50px;
@@ -240,10 +247,12 @@ button.btn {
   transform: scaleX(-1);
   z-index: 10;
 }
+
 button.btn:hover {
   transform: scale(-1.1, 1.1);
   transition: transform 400ms ease;
 }
+
 button.btn:active {
   transform: scale(-0.95, 0.95);
   transition: transform 400ms ease;
@@ -254,6 +263,7 @@ footer.container {
   font-size: 12px;
   padding: 40px 0;
 }
+
 footer p {
   padding: 0 0 10px 0;
   border-bottom: 2px solid #3b3b3b;
@@ -269,6 +279,7 @@ footer p {
     padding: 10px;
   }
 }
+
 @media screen and (max-width: 364px) {
   h1 {
     padding: 5px;
